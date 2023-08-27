@@ -6,6 +6,9 @@ import NameList from './components/NameList';
 import Status from './components/Status';
 import {Button as ButtonEl} from './components/Button';
 import Input from './components/Input';
+import Container from './components/Container';
+import Auth from './components/state/Auth';
+import Counter from './components/state/Counter';
 
 function App() {
   const personName = {
@@ -29,7 +32,7 @@ function App() {
   const [val, setVal] = useState<string>('');
   return (
     <div className="App">
-      <Greet name={'Anand'} messageCount={10} isLoggedIn={true}/>
+      {/* <Greet name={'Anand'} messageCount={10} isLoggedIn={true}/>
       <Person name={personName}/>
       <NameList nameList={nameList}/>
       <Status status={'success'}/>
@@ -37,6 +40,9 @@ function App() {
         console.log('button click', event, id)
       }}/>
       <Input value={val} onChangeHandler={(event) => {setVal(event.target.value);console.log(event.target.value)}}/>
+      <Container styles={{border: '1px solid blue', borderRadius: '2px'}}/> */}
+	  {/* <Auth/> */}
+	  <Counter/>
     </div>
   );
 }

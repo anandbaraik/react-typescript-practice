@@ -1,10 +1,5 @@
 import React from 'react'
-type NameListProps = {
-    nameList: {
-        first: string,
-        last: string
-    }[]
-}
+import { NameListProps } from '../types/NameList.types'
 const NameList = (props:NameListProps) => {
   return (
     <div>
