@@ -9,6 +9,10 @@ import Input from './components/Input';
 import Container from './components/Container';
 import Auth from './components/state/Auth';
 import Counter from './components/state/Counter';
+import Box from './context/Box';
+import { ThemeContextProvider } from './context/ThemeContext';
+import { UserContextProvider } from './context/UserContext';
+import User from './context/User';
 
 function App() {
   const personName = {
@@ -42,7 +46,13 @@ function App() {
       <Input value={val} onChangeHandler={(event) => {setVal(event.target.value);console.log(event.target.value)}}/>
       <Container styles={{border: '1px solid blue', borderRadius: '2px'}}/> */}
 	  {/* <Auth/> */}
-	  <Counter/>
+	  {/* <Counter/> */}
+    {/* <ThemeContextProvider>
+      <Box/>
+    </ThemeContextProvider> */}
+    <UserContextProvider>
+      <User/>
+    </UserContextProvider>
     </div>
   );
 }
